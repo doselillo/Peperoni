@@ -36,15 +36,28 @@ class PizzaViewModel: ViewModel(){
 
     fun setSize(size: String){
         _size.value = size
-        updatePrice()
     }
 
     fun setIngredient(ingredient: String){
         _ingredient.value = ingredient
+
     }
 
     fun setDate(date: String){
         _date.value = date
+        updatePrice()
+    }
+
+    fun setName(name: String){
+        _name.value = name
+    }
+
+    fun setAddress(address: String) {
+        _address.value = address
+    }
+
+    fun setPrice(price: Double){
+        _price.value = price
         updatePrice()
     }
 
@@ -73,16 +86,46 @@ class PizzaViewModel: ViewModel(){
     }
 
     private fun updatePrice(){
-        var sizePrice: Double = when(size.value){
+
+
+
+        var calculatedPrice: Double = (price.value ?: 0.0)
+        var day = 0
+        while(day < 1){
+            if (dateOptions[0] == _date.value){
+                calculatedPrice += PRICE_PER_SAME_DAY_PICKUP
+            }
+            day++
+        }
+        _price.value = calculatedPrice
+
+
+
+
+       /* var sizePrice: Double = when (size.value) {
+            "small" -> {
+                2.0
+            }
+            "medium" -> {
+                4.0
+            }
+            else -> {
+                6.0
+            }
+        }/* = when(size.value?.toString()){
             "small" -> 2.0
             "medium" -> 4.0
             else -> 6.0
-        }
-        var calculatedPrice = (sizePrice ?: 0.0)
+        }*/
+
+        var calculatedPrice = (sizePrice)
         if(dateOptions[0] == _date.value){
             calculatedPrice += PRICE_PER_SAME_DAY_PICKUP
         }
+        _price.value = calculatedPrice*/
     }
+
+
 
 }
 

@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/startFragment"
         android:name="com.example.peperoni.StartFragment"
-        android:label="fragment_start"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_start" >
         <action
             android:id="@+id/action_startFragment_to_ingredientFragment"
@@ -17,13 +17,13 @@
     <fragment
         android:id="@+id/ingredientFragment"
         android:name="com.example.peperoni.IngredientFragment"
-        android:label="fragment_flavor"
+        android:label="@string/choose_ingredient"
         tools:layout="@layout/fragment_ingredient" >
         <action
-            android:id="@+id/action_flavorFragment_to_dateFragment"
+            android:id="@+id/action_ingredientFragment_to_dateFragment"
             app:destination="@id/dateFragment" />
         <action
-            android:id="@+id/action_flavorFragment_to_startFragment"
+            android:id="@+id/action_ingredientFragment_to_startFragment"
             app:destination="@id/startFragment"
             app:popUpTo="@id/startFragment"
             app:popUpToInclusive="true" />
@@ -31,7 +31,7 @@
     <fragment
         android:id="@+id/dateFragment"
         android:name="com.example.peperoni.DateFragment"
-        android:label="fragment_date"
+        android:label="@string/pickup_date"
         tools:layout="@layout/fragment_date" >
         <action
             android:id="@+id/action_dateFragment_to_infoFragment"
@@ -45,7 +45,7 @@
     <fragment
         android:id="@+id/infoFragment"
         android:name="com.example.peperoni.InfoFragment"
-        android:label="fragment_info"
+        android:label="@string/delivery_info"
         tools:layout="@layout/fragment_info" >
         <action
             android:id="@+id/action_infoFragment_to_summaryFragment"
@@ -59,7 +59,7 @@
     <fragment
         android:id="@+id/summaryFragment"
         android:name="com.example.peperoni.SummaryFragment"
-        android:label="fragment_summary"
+        android:label="@string/order_summary"
         tools:layout="@layout/fragment_summary" >
         <action
             android:id="@+id/action_summaryFragment_to_startFragment"

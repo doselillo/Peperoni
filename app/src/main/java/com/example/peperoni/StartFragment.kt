@@ -35,8 +35,9 @@ class StartFragment : Fragment() {
         binding?.startFragment = this
     }
 
-    fun orderPizza(size: String){
+    fun orderPizza(size: String, price: Double){
         sharedViewModel.setSize(size)
+        sharedViewModel.setPrice(price)
         if(sharedViewModel.hasNoIngredientSet()){sharedViewModel.setIngredient("Chicken")}
         findNavController().navigate(R.id.action_startFragment_to_ingredientFragment)
     }

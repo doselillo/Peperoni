@@ -9,9 +9,11 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
-        android:name="com.example.peperoni.StartFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="187dp"
-        tools:layout_editor_absoluteY="338dp" />
+        tools:layout_editor_absoluteY="338dp"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

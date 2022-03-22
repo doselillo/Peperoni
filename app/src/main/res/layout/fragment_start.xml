@@ -46,7 +46,8 @@
                 android:layout_marginTop="@dimen/margin_between_elements"
                 android:minWidth="@dimen/order_pizza_button_width"
                 android:text="@string/small_pizza"
-                android:onClick="@{() -> startFragment.orderPizza(@string/small_pizza)}"/>
+                android:onClick="@{() -> startFragment.orderPizza(@string/small_pizza, 2.0)}"
+                />
 
             <Button
                 android:id="@+id/order_six_cupcakes"
@@ -56,7 +57,7 @@
                 android:layout_marginTop="@dimen/margin_between_elements"
                 android:minWidth="@dimen/order_pizza_button_width"
                 android:text="@string/medium_pizza"
-                android:onClick="@{() -> startFragment.orderPizza(@string/medium_pizza)}"/>
+                android:onClick="@{() -> startFragment.orderPizza(@string/medium_pizza, 4.0)}"/>
 
             <Button
                 android:id="@+id/order_twelve_cupcakes"
@@ -66,7 +67,7 @@
                 android:layout_marginTop="@dimen/margin_between_elements"
                 android:minWidth="@dimen/order_pizza_button_width"
                 android:text="@string/large_pizza"
-                android:onClick="@{() -> startFragment.orderPizza(@string/large_pizza)}"/>
+                android:onClick="@{() -> startFragment.orderPizza(@string/large_pizza, 6.0)}"/>
         </LinearLayout>
     </ScrollView>
 </layout>
