@@ -27,6 +27,6 @@
     <string name="name">Name</string>
     <string name="order_details">Size: %1$s  \n Ingredient: %2$s \nPickup date: %3$s \n Name: %4$s \n Address: %5$s \n
         Total: %6$s \n\n Thank you!</string>
-    <string name="extra_cost">Same day pickup has 2$ extra cost</string>
+    <string name="extra_cost">Same day pickup has extra cost</string>
 
 </resources>
