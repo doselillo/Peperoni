@@ -68,6 +68,12 @@
                 android:minWidth="@dimen/order_pizza_button_width"
                 android:text="@string/large_pizza"
                 android:onClick="@{() -> startFragment.orderPizza(@string/large_pizza, 6.0)}"/>
+
+            <TextView
+                android:id="@+id/extra_cost_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/extra_cost" />
         </LinearLayout>
     </ScrollView>
 </layout>

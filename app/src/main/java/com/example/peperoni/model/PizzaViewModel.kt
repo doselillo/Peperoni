@@ -30,9 +30,14 @@ class PizzaViewModel: ViewModel(){
     private val _price = MutableLiveData<Double>()
     val price: LiveData<Double> = _price
 
+    private val _cost = MutableLiveData<Double>()
+    val cost: LiveData<Double> = _cost
+
     val dateOptions = getdateOptions()
 
-    init{ resetOrder() }
+    init{
+        resetOrder()
+    }
 
     fun setSize(size: String){
         _size.value = size
@@ -57,9 +62,9 @@ class PizzaViewModel: ViewModel(){
         _address.value = address
     }
 
-    fun setPrice(price: Double){
-        _price.value = price
-        //updatePrice()
+    fun setCost(cost: Double){
+        _cost.value = cost
+        updatePrice()
     }
 
     fun hasNoIngredientSet(): Boolean{
@@ -84,40 +89,17 @@ class PizzaViewModel: ViewModel(){
         _name.value = ""
         _address.value = ""
         _price.value = 0.0
+        _cost.value = 0.0
     }
 
     private fun updatePrice(){
 
-        var calculatedPrice = (price.value ?: 0.0)
+        var calculatedPrice = (_cost.value ?: 0.0)
         if (dateOptions[0] == _date.value) {
             calculatedPrice += PRICE_PER_SAME_DAY_PICKUP
         }
         _price.value = calculatedPrice
 
-
-
-
-       /* var sizePrice: Double = when (size.value) {
-            "small" -> {
-                2.0
-            }
-            "medium" -> {
-                4.0
-            }
-            else -> {
-                6.0
-            }
-        }/* = when(size.value?.toString()){
-            "small" -> 2.0
-            "medium" -> 4.0
-            else -> 6.0
-        }*/
-
-        var calculatedPrice = (sizePrice)
-        if(dateOptions[0] == _date.value){
-            calculatedPrice += PRICE_PER_SAME_DAY_PICKUP
-        }
-        _price.value = calculatedPrice*/
     }
 
 

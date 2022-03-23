@@ -37,7 +37,7 @@ class StartFragment : Fragment() {
 
     fun orderPizza(size: String, price: Double){
         sharedViewModel.setSize(size)
-        sharedViewModel.setPrice(price)
+        sharedViewModel.setCost(price)
         if(sharedViewModel.hasNoIngredientSet()){sharedViewModel.setIngredient("Chicken")}
         findNavController().navigate(R.id.action_startFragment_to_ingredientFragment)
     }

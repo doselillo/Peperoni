@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Peperoni</string>
     <string name="order_pizza">Order Pizza</string>
-    <string name="small_pizza">Small</string>
-    <string name="medium_pizza">Medium</string>
-    <string name="large_pizza">Large</string>
+    <string name="small_pizza">Small 2$s</string>
+    <string name="medium_pizza">Medium 4$s</string>
+    <string name="large_pizza">Large 6$s</string>
     <string name="choose_ingredient">Choose Ingredient</string>
     <string name="chicken">Chicken</string>
     <string name="ham">Ham</string>
@@ -27,5 +27,6 @@
     <string name="name">Name</string>
     <string name="order_details">Size: %1$s  \n Ingredient: %2$s \nPickup date: %3$s \n
         Total: %4$s \n\n Thank you!</string>
+    <string name="extra_cost">Same day pickup has 2$s extra cost</string>
 
 </resources>
