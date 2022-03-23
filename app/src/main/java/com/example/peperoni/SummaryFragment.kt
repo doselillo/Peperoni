@@ -49,14 +49,17 @@ class SummaryFragment : Fragment() {
             sharedViewModel.size.value.toString(),
             sharedViewModel.ingredient.value.toString(),
             sharedViewModel.date.value.toString(),
+            sharedViewModel.name.value.toString(),
+            sharedViewModel.address.value.toString(),
             sharedViewModel.price.value.toString()
+
         )
-        //val recivers = arrayOf()
+        val recivers = arrayOf("exampleMail@mail.com")
         val intent = Intent(Intent.ACTION_SEND)
             .setType("text/plain")
             .putExtra(Intent.EXTRA_SUBJECT, getString(R.string.new_pizza_order))
             .putExtra(Intent.EXTRA_TEXT, orderSummary)
-            .putExtra(Intent.EXTRA_EMAIL, "exampleMail")
+            .putExtra(Intent.EXTRA_EMAIL, recivers)
 
         if (activity?.packageManager?.resolveActivity(intent, 0) != null) {
             startActivity(intent)

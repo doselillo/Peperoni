@@ -8,6 +8,9 @@
         <variable
             name="startFragment"
             type="com.example.peperoni.StartFragment" />
+        <variable
+            name="viewModel"
+            type="com.example.peperoni.model.PizzaViewModel" />
     </data>
 
     <ScrollView

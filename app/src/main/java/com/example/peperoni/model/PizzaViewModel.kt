@@ -35,12 +35,17 @@ class PizzaViewModel: ViewModel(){
     }
 
     private val _cost = MutableLiveData<Double>()
-    val cost: LiveData<Double> = _cost
+    val cost: LiveData<String> = Transformations.map(_cost) {
+        NumberFormat.getCurrencyInstance().format(it)
+    }
+
 
     val dateOptions = getdateOptions()
 
     init{
+
         resetOrder()
+
     }
 
     fun setSize(size: String){
@@ -70,6 +75,7 @@ class PizzaViewModel: ViewModel(){
         _cost.value = cost
         updatePrice()
     }
+
 
     fun hasNoIngredientSet(): Boolean{
         return _ingredient.value.isNullOrEmpty()

@@ -104,7 +104,57 @@
                     android:layout_marginTop="@dimen/side_margin"
                     android:layout_marginBottom="@dimen/margin_between_elements" />
 
+                <TextView
+                    android:id="@+id/name_label"
+                    style="@style/Widget.Peperoni.TextView.OrderSummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"
+                    android:textAllCaps="true"
+                    android:textStyle="normal" />
 
+                <TextView
+                    android:id="@+id/name"
+                    style="@style/Widget.Peperoni.TextView.OrderSummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/order_summary_margin"
+                    tools:text="6 cupcakes"
+                    android:text="@{viewModel.name}"/>
+
+                <View
+                    android:id="@+id/divider4"
+                    style="@style/Widget.Peperoni.Divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/side_margin"
+                    android:layout_marginBottom="@dimen/side_margin" />
+
+                <TextView
+                    android:id="@+id/address_label"
+                    style="@style/Widget.Peperoni.TextView.OrderSummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/address"
+                    android:textAllCaps="true"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/address"
+                    style="@style/Widget.Peperoni.TextView.OrderSummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/order_summary_margin"
+                    tools:text="6 cupcakes"
+                    android:text="@{viewModel.address}"/>
+
+                <View
+                    android:id="@+id/divider5"
+                    style="@style/Widget.Peperoni.Divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/side_margin"
+                    android:layout_marginBottom="@dimen/side_margin" />
 
                 <TextView
                     android:id="@+id/total"
