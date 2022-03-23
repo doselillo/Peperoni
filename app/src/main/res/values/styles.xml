@@ -38,7 +38,7 @@
     </style>
 
     <!-- Divider style -->
-    <style name="Widget.Cupcake.Divider" parent="">
+    <style name="Widget.Peperoni.Divider" parent="">
         <item name="android:background">?attr/dividerHorizontal</item>
     </style>
 </resources>

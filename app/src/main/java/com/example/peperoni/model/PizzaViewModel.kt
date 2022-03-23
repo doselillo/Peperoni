@@ -3,7 +3,9 @@ package com.example.peperoni.model
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
+import java.text.NumberFormat
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -28,7 +30,9 @@ class PizzaViewModel: ViewModel(){
     val address: LiveData<String> = _address
 
     private val _price = MutableLiveData<Double>()
-    val price: LiveData<Double> = _price
+    val price: LiveData<String> = Transformations.map(_price) {
+        NumberFormat.getCurrencyInstance().format(it)
+    }
 
     private val _cost = MutableLiveData<Double>()
     val cost: LiveData<Double> = _cost

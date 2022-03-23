@@ -50,7 +50,7 @@
 
                 <View
                     android:id="@+id/divider1"
-                    style="@style/Widget.Cupcake.Divider"
+                    style="@style/Widget.Peperoni.Divider"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="@dimen/side_margin"
@@ -74,7 +74,7 @@
 
                 <View
                     android:id="@+id/divider2"
-                    style="@style/Widget.Cupcake.Divider"
+                    style="@style/Widget.Peperoni.Divider"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="@dimen/side_margin"
@@ -98,11 +98,13 @@
 
                 <View
                     android:id="@+id/divider3"
-                    style="@style/Widget.Cupcake.Divider"
+                    style="@style/Widget.Peperoni.Divider"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="@dimen/side_margin"
                     android:layout_marginBottom="@dimen/margin_between_elements" />
+
+
 
                 <TextView
                     android:id="@+id/total"
